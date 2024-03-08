@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import selfie from '../assets/photos/selfie.jpg';
 import { ArrowDown } from '../assets/svgs/ArrowDown';
-import { useContext } from 'react';
-import { CursorContext } from '../contexts/CursorContext';
+import { setCursorVariant } from '../state/cursor/cursorSlice';
+import { useDispatch } from 'react-redux';
 
 const Landing = () => {
-  const { setCursorVariant } = useContext(CursorContext);
+  const dispatch = useDispatch();
 
   const arrowVariants = {
     jump: {
@@ -61,8 +61,8 @@ const Landing = () => {
         variants={arrowVariants}
         animate="jump"
         className="mt-5 lg:self-start"
-        onMouseEnter={() => setCursorVariant({ variant: 'hover' })}
-        onMouseLeave={() => setCursorVariant({ variant: 'default' })}
+        onMouseEnter={() => dispatch(setCursorVariant('hover'))}
+        onMouseLeave={() => dispatch(setCursorVariant('default'))}
         onClick={() => {
           document.getElementById('expertise')?.scrollIntoView({
             behavior: 'smooth',

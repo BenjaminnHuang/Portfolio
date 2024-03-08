@@ -1,14 +1,18 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoMdClose } from 'react-icons/io';
 import Resume from '../assets/pdfs/Hung-I_Huang_resume.pdf';
 import { motion } from 'framer-motion';
 import Landing from '../pages/landing_page';
 import Expertise from '../pages/expertise_page';
-import { CursorContext } from '../contexts/CursorContext';
 import Project from '../pages/project_page';
+import { useDispatch } from 'react-redux';
+import { setCursorVariant } from '../state/cursor/cursorSlice';
 
 const Navbar = () => {
+  const [toggleDrawer, setToggleDrawer] = useState(false);
+  const dispatch = useDispatch();
+
   const hoverAnimation = {
     rotate: [0, 3.3, -3.0, 0],
     transition: {
@@ -20,19 +24,16 @@ const Navbar = () => {
     },
   };
 
-  const [toggleDrawer, setToggleDrawer] = useState(false);
-  const { setCursorVariant } = useContext(CursorContext);
-
   const renderMenu = () => {
     return (
       <div className="flex min-h-dvh flex-col bg-[#1a191d] text-white">
         <button
           className="mx-10 my-4 self-end"
-          onMouseEnter={() => setCursorVariant({ variant: 'hover' })}
-          onMouseLeave={() => setCursorVariant({ variant: 'default' })}
+          onMouseEnter={() => dispatch(setCursorVariant('hover'))}
+          onMouseLeave={() => dispatch(setCursorVariant('default'))}
           onClick={() => {
             setToggleDrawer(false);
-            setCursorVariant({ variant: 'default' });
+            dispatch(setCursorVariant('default'));
           }}
         >
           <motion.div
@@ -45,11 +46,11 @@ const Navbar = () => {
         <div className="mt-12 flex flex-col items-center justify-start gap-12 text-4xl md:mt-24 md:gap-20 md:text-6xl">
           <a
             href="#landing"
-            onMouseEnter={() => setCursorVariant({ variant: 'hover' })}
-            onMouseLeave={() => setCursorVariant({ variant: 'default' })}
+            onMouseEnter={() => dispatch(setCursorVariant('hover'))}
+            onMouseLeave={() => dispatch(setCursorVariant('default'))}
             onClick={() => {
               setToggleDrawer(false);
-              setCursorVariant({ variant: 'default' });
+              dispatch(setCursorVariant('default'));
             }}
           >
             <motion.div
@@ -68,11 +69,11 @@ const Navbar = () => {
           </a>
           <a
             href="#expertise"
-            onMouseEnter={() => setCursorVariant({ variant: 'hover' })}
-            onMouseLeave={() => setCursorVariant({ variant: 'default' })}
+            onMouseEnter={() => dispatch(setCursorVariant('hover'))}
+            onMouseLeave={() => dispatch(setCursorVariant('default'))}
             onClick={() => {
               setToggleDrawer(false);
-              setCursorVariant({ variant: 'default' });
+              dispatch(setCursorVariant('default'));
             }}
           >
             <motion.div
@@ -91,11 +92,11 @@ const Navbar = () => {
           </a>
           <a
             href="#project"
-            onMouseEnter={() => setCursorVariant({ variant: 'hover' })}
-            onMouseLeave={() => setCursorVariant({ variant: 'default' })}
+            onMouseEnter={() => dispatch(setCursorVariant('hover'))}
+            onMouseLeave={() => dispatch(setCursorVariant('default'))}
             onClick={() => {
               setToggleDrawer(false);
-              setCursorVariant({ variant: 'default' });
+              dispatch(setCursorVariant('default'));
             }}
           >
             <motion.div
@@ -115,11 +116,11 @@ const Navbar = () => {
           <a
             href={Resume}
             target="_blank"
-            onMouseEnter={() => setCursorVariant({ variant: 'hover' })}
-            onMouseLeave={() => setCursorVariant({ variant: 'default' })}
+            onMouseEnter={() => dispatch(setCursorVariant('hover'))}
+            onMouseLeave={() => dispatch(setCursorVariant('default'))}
             onClick={() => {
               setToggleDrawer(false);
-              setCursorVariant({ variant: 'default' });
+              dispatch(setCursorVariant('default'));
             }}
           >
             <motion.div
@@ -154,10 +155,10 @@ const Navbar = () => {
               whileHover={{ scale: '1.2' }}
               onClick={() => {
                 setToggleDrawer(true);
-                setCursorVariant({ variant: 'default' });
+                dispatch(setCursorVariant('default'));
               }}
-              onMouseEnter={() => setCursorVariant({ variant: 'hover' })}
-              onMouseLeave={() => setCursorVariant({ variant: 'default' })}
+              onMouseEnter={() => dispatch(setCursorVariant('hover'))}
+              onMouseLeave={() => dispatch(setCursorVariant('default'))}
             >
               <RxHamburgerMenu size={36} />
             </motion.button>

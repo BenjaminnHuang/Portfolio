@@ -22,6 +22,7 @@ function Project() {
       >
         My Work
       </motion.h1>
+
       <ProjectCard
         title={ProjectData[0].title}
         description={ProjectData[0].description}

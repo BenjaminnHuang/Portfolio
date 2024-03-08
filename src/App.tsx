@@ -3,12 +3,19 @@ import { useState, useRef, useContext } from 'react';
 import useMouse from '@react-hook/mouse-position';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
-import { CursorContext } from './contexts/CursorContext';
+import { useSelector } from 'react-redux';
+import { RootState } from './state/store';
 
 function App() {
-  const { cursorVariant, cursorBorderVariant } = useContext(CursorContext);
   const [mouseXPosition, setMouseXPosition] = useState(0);
   const [mouseYPosition, setMouseYPosition] = useState(0);
+
+  const cursorVariant = useSelector(
+    (state: RootState) => state.cursor.cursorVariant,
+  );
+  const cursorBorderVariant = useSelector(
+    (state: RootState) => state.cursor.cursorBorderVariant,
+  );
 
   const ref = useRef(null);
   const mouse = useMouse(ref, {
@@ -87,12 +94,6 @@ function App() {
       borderColor: '#ffffff',
       x: mouseXPosition - 25,
       y: mouseYPosition - 25,
-      transition: {
-        type: 'spring',
-        mass: 0.2,
-        stiffness: 300,
-        damping: 20,
-      },
     },
   };
 
@@ -121,15 +122,15 @@ function App() {
       <motion.div
         variants={variants}
         id="cursor"
-        animate={cursorVariant.variant}
+        animate={cursorVariant}
         className="m-0 flex items-center justify-center p-0 text-5xl leading-none"
       >
-        {cursorVariant.variant === 'hoverImage' && '+'}
+        {cursorVariant === 'hoverImage' && '+'}
       </motion.div>
       <motion.div
         variants={borderVariants}
         id="cursor-border"
-        animate={cursorBorderVariant.variant}
+        animate={cursorBorderVariant}
       ></motion.div>
 
       <Navbar />
