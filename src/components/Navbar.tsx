@@ -184,12 +184,6 @@ const Navbar = () => {
             >
               <Project />
             </section>
-            <section
-              id="project"
-              className="flex min-h-dvh w-full items-center justify-center py-10"
-            >
-              <Experience />
-            </section>
           </main>
           <footer className="flex items-center justify-center bg-[#29282e] py-5">
             <Footer />

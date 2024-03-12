@@ -26,6 +26,6 @@ export const ProjectData: ProjectType[] = [
     image: UTA,
     description: 'A website for the United Taiwanese Association at UCSD.',
     skills: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
-    link: 'http://www.fvtech.com.tw',
+    link: '',
   },
 ];
