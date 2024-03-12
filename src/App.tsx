@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar';
-import { useState, useRef, useContext } from 'react';
+import { useState, useRef } from 'react';
 import useMouse from '@react-hook/mouse-position';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
