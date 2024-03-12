@@ -16,7 +16,7 @@ const Expertise = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-16 px-5 md:px-10">
       <motion.h1
-        className="font-Product text-7xl font-bold md:text-8xl"
+        className="font-Product text-5xl font-bold md:text-7xl"
         variants={variants}
         initial="initial"
         whileInView="animate"
