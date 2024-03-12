@@ -9,7 +9,6 @@ import Project from '../pages/project_page';
 import { useDispatch } from 'react-redux';
 import { setCursorVariant } from '../state/cursor/cursorSlice';
 import Footer from './footer';
-import Experience from '../pages/experience.page';
 
 const Navbar = () => {
   const [toggleDrawer, setToggleDrawer] = useState(false);
