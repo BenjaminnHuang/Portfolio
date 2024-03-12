@@ -9,6 +9,7 @@ import { RootState } from './state/store';
 function App() {
   const [mouseXPosition, setMouseXPosition] = useState(0);
   const [mouseYPosition, setMouseYPosition] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const cursorVariant = useSelector(
     (state: RootState) => state.cursor.cursorVariant,
@@ -16,6 +17,10 @@ function App() {
   const cursorBorderVariant = useSelector(
     (state: RootState) => state.cursor.cursorBorderVariant,
   );
+
+  useEffect(() => {
+    setIsMobile(window.matchMedia('(pointer: coarse)').matches);
+  }, []);
 
   const ref = useRef(null);
   const mouse = useMouse(ref, {
@@ -106,6 +111,7 @@ function App() {
           z-index: 999;
           border-radius: 50%;
           pointer-events: none;
+          ${isMobile ? 'display: none;' : ''}
         }
  
         #cursor-border {
@@ -115,6 +121,7 @@ function App() {
           border: 2px solid #66D9ED;
           border-radius: 50%;
           pointer-events: none;
+          ${isMobile ? 'display: none;' : ''}
         }
       `}
       </style>
