@@ -112,7 +112,30 @@ const Navbar = () => {
                 },
               }}
             >
-              Projects
+              Work
+            </motion.div>
+          </a>
+          <a
+            href="#experience"
+            onMouseEnter={() => dispatch(setCursorVariant('hover'))}
+            onMouseLeave={() => dispatch(setCursorVariant('default'))}
+            onClick={() => {
+              setToggleDrawer(false);
+              dispatch(setCursorVariant('default'));
+            }}
+          >
+            <motion.div
+              whileHover={hoverAnimation}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{
+                opacity: 1,
+                x: ['50%', '0%'],
+                transition: {
+                  duration: 0.6,
+                },
+              }}
+            >
+              Experience
             </motion.div>
           </a>
           <a
@@ -184,7 +207,7 @@ const Navbar = () => {
             >
               <Project />
             </section>
-            <section id="project" className="h-auto w-full">
+            <section id="experience" className="h-auto w-full">
               <Experience />
             </section>
           </main>
