@@ -1,25 +1,31 @@
 import FVT from '/fvt.png';
+import UTA from '/uta.png';
 
 export type ProjectType = {
   title: string;
+  type: string;
   description: string;
-  image?: string;
+  image: string;
+  skills: string[];
+  link: string;
 };
 
 export const ProjectData: ProjectType[] = [
   {
-    title: 'Fist Value Tech',
-    description: 'Web Development',
+    title: 'First Value Tech',
+    type: 'Web Development',
     image: FVT,
+    description:
+      'A user-friendly website for the Taiwan-based technology company.',
+    skills: ['React', 'Sanity', 'Tailwind'],
+    link: 'http://www.fvtech.com.tw',
   },
   {
-    title: 'Project 2',
-    description: 'Project 2 description',
-    image: '/images/project2.png',
-  },
-  {
-    title: 'Project 3',
-    description: 'Project 3 description',
-    image: '/images/project3.png',
+    title: 'United Taiwanese Association',
+    type: 'Web Development',
+    image: UTA,
+    description: 'A website for the United Taiwanese Association at UCSD.',
+    skills: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
+    link: 'http://www.fvtech.com.tw',
   },
 ];

@@ -1,25 +1,31 @@
 export type ExpertiseType = {
   index: number;
   title: string;
-  description: string;
+  skills: string[];
 };
 
 export const ExpertiseData: ExpertiseType[] = [
   {
     index: 1,
     title: 'Software Development',
-    description:
-      'Experienced in C/C++, Python, Git, Docker, and agile methodologies.',
+    skills: ['C/C++', 'Python', 'Git', 'Docker', 'Agile Methodologies'],
   },
   {
     index: 2,
     title: 'Frontend Development',
-    description:
-      'Skilled in HTML, CSS, JavaScript, TypeScript, React, and NextJS.',
+    skills: [
+      'HTML',
+      'CSS',
+      'Tailwind',
+      'JavaScript',
+      'TypeScript',
+      'ReactJS',
+      'NextJS',
+    ],
   },
   {
     index: 3,
     title: 'Backend Development',
-    description: 'Proficient in NodeJS, ExpressJS, and SQL/NoSQL databases.',
+    skills: ['NodeJS', 'ExpressJS', 'SQL', 'NoSQL', 'RESTful API'],
   },
 ];

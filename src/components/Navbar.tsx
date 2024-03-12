@@ -8,6 +8,8 @@ import Expertise from '../pages/expertise_page';
 import Project from '../pages/project_page';
 import { useDispatch } from 'react-redux';
 import { setCursorVariant } from '../state/cursor/cursorSlice';
+import Footer from './footer';
+import Experience from '../pages/experience.page';
 
 const Navbar = () => {
   const [toggleDrawer, setToggleDrawer] = useState(false);
@@ -166,23 +168,32 @@ const Navbar = () => {
           <main className="flex flex-col items-center justify-center pt-20 md:pt-10">
             <section
               id="landing"
-              className="flex min-h-dvh w-full items-center justify-center"
+              className="flex min-h-dvh w-full items-center justify-center py-10"
             >
               <Landing />
             </section>
             <section
               id="expertise"
-              className="flex min-h-dvh w-full items-center justify-center"
+              className="flex min-h-dvh w-full items-center justify-center py-10"
             >
               <Expertise />
             </section>
             <section
               id="project"
-              className="flex min-h-dvh w-full items-center justify-center"
+              className="flex min-h-dvh w-full items-center justify-center py-10"
             >
               <Project />
             </section>
+            <section
+              id="project"
+              className="flex min-h-dvh w-full items-center justify-center py-10"
+            >
+              <Experience />
+            </section>
           </main>
+          <footer className="flex items-center justify-center bg-[#29282e] py-5">
+            <Footer />
+          </footer>
         </div>
       )}
     </>

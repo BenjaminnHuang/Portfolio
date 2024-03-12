@@ -44,17 +44,43 @@ const Landing = () => {
         </motion.div>
         {/* Header */}
         <div className="flex max-w-[340px] flex-col gap-5 md:max-w-[450px] lg:max-w-[370px] 2xl:max-w-[560px]">
-          <div className="text-center text-3xl leading-tight md:text-4xl md:leading-snug lg:text-start lg:text-4xl lg:leading-tight 2xl:text-6xl ">
+          <motion.div
+            className="text-center text-3xl leading-tight md:text-4xl md:leading-snug lg:text-start lg:text-4xl lg:leading-tight 2xl:text-6xl"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 0.2, duration: 0.6 },
+            }}
+            viewport={{ once: true }}
+          >
             Hello! I’m Benjamin. <br /> A Software Engineer <br />
             based in San Diego.
-          </div>
-          <hr />
-          <div className="text-md text-center md:text-xl lg:text-justify lg:text-lg 2xl:text-2xl">
+          </motion.div>
+          <motion.hr
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 0.4, duration: 0.6 },
+            }}
+            viewport={{ once: true }}
+          />
+          <motion.div
+            className="text-md text-center md:text-xl lg:text-justify lg:text-lg 2xl:text-2xl"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 0.6, duration: 0.6 },
+            }}
+            viewport={{ once: true }}
+          >
             Passionate about building sleek, user-friendly frontends that drive
             business success and user engagement.
             <br />
             Let’s craft something great together.
-          </div>
+          </motion.div>
         </div>
       </div>
       <motion.button

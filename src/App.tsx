@@ -66,7 +66,7 @@ function App() {
       opacity: 1,
       height: 30,
       width: 30,
-      backgroundColor: 'transparent',
+      backgroundColor: 'rgba(0, 0, 0, 0)',
       color: '#ffffff',
       x: mouseXPosition - 15,
       y: mouseYPosition - 20,
