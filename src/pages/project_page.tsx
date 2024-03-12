@@ -36,7 +36,7 @@ function Project() {
   return (
     <div className="flex w-full flex-col items-center justify-center gap-16 px-5 md:px-10">
       <motion.h1
-        className="z-10 font-Product text-7xl font-bold sm:text-8xl"
+        className="z-10 font-Product text-7xl font-bold md:text-8xl"
         variants={variants}
         initial="initial"
         whileInView="animate"
