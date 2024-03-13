@@ -3,6 +3,8 @@ import { ExperienceType } from '../data/experience';
 import { FaMinus, FaPlus } from 'react-icons/fa6';
 import { IoLocationSharp } from 'react-icons/io5';
 import { AnimatePresence, motion } from 'framer-motion';
+import { setCursorVariant } from '../state/cursor/cursorSlice';
+import { useDispatch } from 'react-redux';
 
 const ExperienceBar = ({
   title,
@@ -14,6 +16,7 @@ const ExperienceBar = ({
   index,
 }: ExperienceType) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const dispatch = useDispatch();
 
   const barVariants = {
     initial: { backgroundColor: '#490C86DE' },
@@ -99,6 +102,8 @@ const ExperienceBar = ({
         variants={barVariants}
         initial="initial"
         animate={isExpanded ? 'clicked' : 'initial'}
+        onMouseEnter={() => dispatch(setCursorVariant('hover'))}
+        onMouseLeave={() => dispatch(setCursorVariant('default'))}
       >
         <h2>{title}</h2>
         <div className="flex flex-row items-center justify-center gap-4 md:gap-8">
