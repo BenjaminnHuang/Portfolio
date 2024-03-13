@@ -1,8 +1,12 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { ExperienceData } from '../data/experience';
 import ExperienceBar from '../components/experience_bar';
+import { useDispatch } from 'react-redux';
+import { setCursorVariant } from '../state/cursor/cursorSlice';
 
 const Experience = () => {
+  const dispatch = useDispatch();
+
   const variants = {
     initial: { opacity: 0, y: 70 },
     animate: {
@@ -38,6 +42,8 @@ const Experience = () => {
                   transition: { delay: 0.2 * experience.index, duration: 0.5 },
                 }}
                 viewport={{ once: true }}
+                onMouseEnter={() => dispatch(setCursorVariant('hover'))}
+                onMouseLeave={() => dispatch(setCursorVariant('default'))}
               >
                 <ExperienceBar {...experience} />
               </motion.div>

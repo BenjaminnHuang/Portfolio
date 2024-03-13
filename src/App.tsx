@@ -41,30 +41,30 @@ function App() {
   const variants = {
     default: {
       opacity: 1,
-      height: 6,
-      width: 6,
+      height: 8,
+      width: 8,
       backgroundColor: '#66D9ED',
-      x: mouseXPosition - 3,
-      y: mouseYPosition - 3,
+      x: mouseXPosition - 4,
+      y: mouseYPosition - 4,
       transition: {
         type: 'spring',
         mass: 0.1,
-        stiffness: 1000,
+        stiffness: 900,
         damping: 20,
       },
     },
     hover: {
       opacity: 0.8,
-      height: 30,
-      width: 30,
+      height: 50,
+      width: 50,
       backgroundColor: '#66D9ED',
-      x: mouseXPosition - 15,
-      y: mouseYPosition - 15,
+      x: mouseXPosition - 25,
+      y: mouseYPosition - 25,
       transition: {
         type: 'spring',
         mass: 0.1,
-        stiffness: 400,
-        damping: 50,
+        stiffness: 900,
+        damping: 20,
       },
     },
     hoverImage: {
@@ -81,10 +81,10 @@ function App() {
   const borderVariants = {
     default: {
       opacity: 1,
-      height: 40,
-      width: 40,
-      x: mouseXPosition - 20, // subtract half of the width
-      y: mouseYPosition - 20, // subtract half of the height
+      height: 60,
+      width: 60,
+      x: mouseXPosition - 30, // subtract half of the width
+      y: mouseYPosition - 30, // subtract half of the height
       transition: {
         type: 'spring',
         mass: 0.2,
@@ -94,11 +94,11 @@ function App() {
     },
     hoverImage: {
       opacity: 1,
-      height: 50,
-      width: 50,
+      height: 60,
+      width: 60,
       borderColor: '#ffffff',
-      x: mouseXPosition - 25,
-      y: mouseYPosition - 25,
+      x: mouseXPosition - 30,
+      y: mouseYPosition - 30,
     },
   };
 
@@ -106,6 +106,10 @@ function App() {
     <div ref={ref}>
       <style>
         {`
+        * {
+          cursor: none;
+        }
+
         #cursor {
           position: fixed;
           z-index: 999;
