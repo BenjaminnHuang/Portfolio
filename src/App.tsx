@@ -107,7 +107,7 @@ function App() {
       <style>
         {`
         * {
-          cursor: none;
+          cursor: none !important;
         }
 
         #cursor {
