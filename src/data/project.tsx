@@ -56,7 +56,7 @@ export const ProjectData: ProjectType[] = [
         "This website serves as a digital hub for the United Taiwanese Association at UCSD, showcasing upcoming events, important information, and resources for current and prospective members. Featuring a user-friendly dashboard, the platform enables non-technical administrators to effortlessly update content, ensuring the association's online presence is vibrant and up-to-date.",
       job: 'Responsibilities encompassed both front-end and back-end development, crafting a seamless web experience and a straightforward content management system. Key contributions included selecting appropriate backend solutions, coding, code review, and leading project meetings to maintain momentum and align on objectives.',
       image: UTA,
-      team: 'United Taiwanese Association',
+      team: 'We@avers',
       role: 'Software Engineer / Project Lead',
     },
   },
