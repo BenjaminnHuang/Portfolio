@@ -21,14 +21,7 @@ function Project() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <ProjectCard
-          link={project.link}
-          title={project.title}
-          type={project.type}
-          image={project.image}
-          description={project.description}
-          skills={project.skills}
-        />
+        <ProjectCard {...project} />
       </motion.div>
     ));
   };

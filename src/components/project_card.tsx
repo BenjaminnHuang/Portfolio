@@ -6,6 +6,7 @@ import {
   setCursorVariant,
   setCursorBorderVariant,
 } from '../state/cursor/cursorSlice';
+import { NavLink } from 'react-router-dom';
 
 const ProjectCard = ({
   title,
@@ -13,7 +14,7 @@ const ProjectCard = ({
   image,
   type,
   skills,
-  link,
+  param,
 }: ProjectType) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isImageHovered, setIsImageHovered] = useState(false);
@@ -41,8 +42,12 @@ const ProjectCard = ({
         className="relative h-full w-full overflow-hidden"
         onMouseEnter={() => setIsImageHovered(true)}
         onMouseLeave={() => setIsImageHovered(false)}
+        onClick={() => {
+          dispatch(setCursorVariant('default'));
+          dispatch(setCursorBorderVariant('default'));
+        }}
       >
-        <a href={link} target="_blank" rel="noopener noreferrer">
+        <NavLink to={`/project/${param}`}>
           <img
             src={image}
             alt="project image"
@@ -65,7 +70,7 @@ const ProjectCard = ({
               </p>
             </div>
           )}
-        </a>
+        </NavLink>
       </div>
       <div className="flex flex-row items-center justify-between bg-[#8888880d] p-8 text-white">
         <div className="flex flex-col items-start justify-center gap-2">

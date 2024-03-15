@@ -67,7 +67,7 @@ const Landing = () => {
             viewport={{ once: true }}
           />
           <motion.div
-            className="text-md text-center md:text-xl lg:text-justify lg:text-lg 2xl:text-2xl"
+            className="text-md text-center md:text-xl lg:text-start lg:text-lg 2xl:text-2xl"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{
               opacity: 1,
@@ -76,10 +76,11 @@ const Landing = () => {
             }}
             viewport={{ once: true }}
           >
-            Passionate about building sleek, user-friendly frontends that drive
-            business success and user engagement.
+            My drive is in creating elegant and intuitive frontends that elevate
+            user experience and business impact.
             <br />
-            Let’s craft something great together.
+            <br />
+            Ready to collaborate on something amazing?
           </motion.div>
         </div>
       </div>

@@ -1,15 +1,28 @@
-import Navbar from './components/Navbar';
+import Layout from './components/layout';
 import { useState, useRef } from 'react';
 import useMouse from '@react-hook/mouse-position';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from './state/store';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ProjectDetails from './pages/project_details';
 
 function App() {
   const [mouseXPosition, setMouseXPosition] = useState(0);
   const [mouseYPosition, setMouseYPosition] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout />,
+    },
+    {
+      path: '/project/:name',
+      element: <ProjectDetails />,
+    },
+  ]);
 
   const cursorVariant = useSelector(
     (state: RootState) => state.cursor.cursorVariant,
@@ -41,11 +54,11 @@ function App() {
   const variants = {
     default: {
       opacity: 1,
-      height: 8,
-      width: 8,
+      height: 6,
+      width: 6,
       backgroundColor: '#66D9ED',
-      x: mouseXPosition - 4,
-      y: mouseYPosition - 4,
+      x: mouseXPosition - 3,
+      y: mouseYPosition - 3,
       transition: {
         type: 'spring',
         mass: 0.1,
@@ -55,11 +68,11 @@ function App() {
     },
     hover: {
       opacity: 0.8,
-      height: 50,
-      width: 50,
+      height: 30,
+      width: 30,
       backgroundColor: '#66D9ED',
-      x: mouseXPosition - 25,
-      y: mouseYPosition - 25,
+      x: mouseXPosition - 15,
+      y: mouseYPosition - 15,
       transition: {
         type: 'spring',
         mass: 0.1,
@@ -81,10 +94,10 @@ function App() {
   const borderVariants = {
     default: {
       opacity: 1,
-      height: 60,
-      width: 60,
-      x: mouseXPosition - 30, // subtract half of the width
-      y: mouseYPosition - 30, // subtract half of the height
+      height: 40,
+      width: 40,
+      x: mouseXPosition - 20, // subtract half of the width
+      y: mouseYPosition - 20, // subtract half of the height
       transition: {
         type: 'spring',
         mass: 0.2,
@@ -94,11 +107,11 @@ function App() {
     },
     hoverImage: {
       opacity: 1,
-      height: 60,
-      width: 60,
+      height: 40,
+      width: 40,
       borderColor: '#ffffff',
-      x: mouseXPosition - 30,
-      y: mouseYPosition - 30,
+      x: mouseXPosition - 20,
+      y: mouseYPosition - 20,
     },
   };
 
@@ -129,12 +142,11 @@ function App() {
         }
       `}
       </style>
-
       <motion.div
         variants={variants}
         id="cursor"
         animate={cursorVariant}
-        className="m-0 flex items-center justify-center p-0 text-5xl leading-none"
+        className="m-0 flex items-center justify-center p-0 text-4xl leading-none"
       >
         {cursorVariant === 'hoverImage' && '+'}
       </motion.div>
@@ -143,8 +155,7 @@ function App() {
         id="cursor-border"
         animate={cursorBorderVariant}
       ></motion.div>
-
-      <Navbar />
+      <RouterProvider router={router} />
     </div>
   );
 }

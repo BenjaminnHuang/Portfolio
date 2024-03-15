@@ -4,7 +4,7 @@ import { IoIosMail } from 'react-icons/io';
 
 const Footer = () => {
   return (
-    <div className="flex w-full flex-row items-center justify-center gap-8">
+    <footer className="flex w-full flex-row items-center justify-center gap-8 bg-[#29282e] py-5">
       <a href="https://github.com/BenjaminnHuang" target="_blank">
         <FaGithub size={32} className="hover:text-blue-400" />
       </a>
@@ -14,7 +14,7 @@ const Footer = () => {
       <a href="mailto:hungihuang.company@gmail.com" target="_blank">
         <IoIosMail size={38} className="hover:text-blue-400" />
       </a>
-    </div>
+    </footer>
   );
 };
 

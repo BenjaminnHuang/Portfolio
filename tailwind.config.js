@@ -5,6 +5,8 @@ export default {
     extend: {},
     fontFamily: {
       Product: ['Quicksand', 'sans-serif'],
+      Montserrat: ['Montserrat', 'sans-serif'],
+      Playfair: ['Playfair Display', 'serif'],
     },
   },
   plugins: [],
