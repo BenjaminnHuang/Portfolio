@@ -36,7 +36,7 @@ If you're interested in collaborating or have any questions, feel free to connec
 
 - **Email**: [benjaminhuang.company@gmail.com](mailto:benjaminhuang.company@gmail.com)
 - **LinkedIn**: [Visit my LinkedIn](https://www.linkedin.com/in/hung-i-huang/)
-- **GitHub**: [Visit my GitHub](https://github.com/benjaminhuang)
+- **GitHub**: [Visit my GitHub](https://github.com/BenjaminnHuang)
 
 Thank you for visiting my portfolio. I am actively seeking opportunities and am excited to engage in new challenges!
 
