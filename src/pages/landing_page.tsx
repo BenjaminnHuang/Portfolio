@@ -85,6 +85,7 @@ const Landing = () => {
         </div>
       </div>
       <motion.button
+        type="button"
         variants={arrowVariants}
         animate="jump"
         className="mt-5 lg:self-start"

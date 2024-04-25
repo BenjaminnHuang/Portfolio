@@ -37,6 +37,7 @@ const Navbar = () => {
         Benjamin Huang
       </a>
       <motion.button
+        type="button"
         whileHover={{ scale: '1.2' }}
         onClick={() => {
           dispatch(setNavbarOpen(true));
