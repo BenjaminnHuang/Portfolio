@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# Benjamin Huang's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the GitHub repository for my professional portfolio! This site showcases my skills and projects as a software engineer, with a focus on front-end development and user interface design.
 
-Currently, two official plugins are available:
+## Introduction
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hello! I'm Benjamin Huang, a dedicated and passionate software engineer who graduated from the University of California, San Diego with a degree in Mathematics and Computer Science. I specialize in creating intuitive and dynamic user experiences with modern web technologies.
 
-## Expanding the ESLint configuration
+## Portfolio Website
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**[Visit my portfolio](https://benjaminhuang.dev)** to see my projects in action. The website includes detailed case studies and live demonstrations of my work.
 
-- Configure the top-level `parserOptions` property like this:
+## Featured Projects
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
+Here are some of the highlights from my portfolio:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### We@vers
+- **Description**: A platform designed to provide small businesses with bespoke website solutions. This project emphasizes customizability and user-friendly interfaces.
+- **Technologies Used**: React, Tailwind CSS, Sanity
+- **[View Live](https://benjaminhuang.dev/projects/weavers)** | **[Source Code](https://github.com/yourGitHub/weavers)**
+
+### Mood Tracker Web App
+- **Description**: An application that allows users to track their daily moods and gain insights over time, enhancing mental health awareness.
+- **Technologies Used**: HTML, CSS, JavaScript, Agile methodologies
+- **[View Live](https://benjaminhuang.dev/projects/moodtracker)** | **[Source Code](https://github.com/yourGitHub/moodtracker)**
+
+## Skills
+
+- **Languages**: JavaScript (ES6+), Python, Java
+- **Frameworks/Libraries**: React, Node.js, Express
+- **Databases**: Firebase, MongoDB
+- **Tools**: Git, Docker, Netlify, GitHub Actions
+- **Design Tools**: Figma, Adobe XD
+
+## Contact
+
+If you're interested in collaborating or have any questions, feel free to connect with me:
+
+- **Email**: [benjaminhuang.company@gmail.com](mailto:benjaminhuang.company@gmail.com)
+- **LinkedIn**: [Visit my LinkedIn](https://www.linkedin.com/in/benjamin-huang)
+- **GitHub**: [Visit my GitHub](https://github.com/benjaminhuang)
+
+Thank you for visiting my portfolio. I am actively seeking opportunities and am excited to engage in new challenges!
+
