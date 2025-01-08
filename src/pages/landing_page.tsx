@@ -55,7 +55,7 @@ const Landing = () => {
             viewport={{ once: true }}
           >
             Hello! I’m Benjamin. <br /> A Software Engineer <br />
-            based in San Diego.
+            based in Taiwan.
           </motion.div>
           <motion.hr
             initial={{ opacity: 0, x: -100 }}

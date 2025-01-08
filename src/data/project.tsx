@@ -48,7 +48,7 @@ export const ProjectData: ProjectType[] = [
     image: UTA,
     description: 'A website for the United Taiwanese Association at UCSD.',
     skills: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
-    link: '',
+    link: 'https://ucsd-uta.netlify.app/',
     param: 'uta',
     details: {
       name: 'United Taiwanese Association Website',

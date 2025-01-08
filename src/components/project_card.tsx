@@ -15,6 +15,7 @@ const ProjectCard = ({
   type,
   skills,
   param,
+  link,
 }: ProjectType) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isImageHovered, setIsImageHovered] = useState(false);
@@ -84,7 +85,7 @@ const ProjectCard = ({
                 exit={{ opacity: 0, y: 15 }}
                 transition={{ duration: 0.1 }}
                 className=" text-sm font-bold hover:cursor-pointer hover:text-[#66D9ED]"
-                href="https://www.fvtech.com.tw"
+                href={link}
                 target="_blank"
                 rel="noreferrer noopener"
                 onMouseEnter={() => dispatch(setCursorVariant('hover'))}

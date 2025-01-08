@@ -11,7 +11,7 @@ export type ExperienceType = {
 export const ExperienceData: ExperienceType[] = [
   {
     index: 1,
-    title: 'Software Engineer Intern',
+    title: 'Software Engineer',
     location: 'Remote',
     company: 'Ra Labs',
     description:
